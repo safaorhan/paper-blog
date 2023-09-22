@@ -22,7 +22,7 @@ p {
     line-height: 2rem;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 992px) {
     h1 {
         font-size: 4rem;
     }
@@ -52,12 +52,12 @@ a {
     text-justify: inter-word;
 }
 
-.meta > p {
+.meta>p {
     color: rgb(189, 189, 189);
 }
 
-[contentEditable=true] h1:empty:not(:focus)::before{
-    content:attr(data-ph);
+[contentEditable=true] h1:empty:not(:focus)::before {
+    content: attr(data-ph);
     color: rgb(189, 189, 189);
 }
 
@@ -97,9 +97,25 @@ a {
     font-size: 1.25rem;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 992px) {
     .index p {
         line-height: 4rem;
         font-size: 2rem;
     }
+
+    .index .title::after {
+        font-weight: 300;
+    }
+
+    .index .title {
+        font-weight: 500;
+        width: stretch;
+        width: -webkit-fill-available;
+        width: -moz-available;
+    }
+
+    .index .date {
+        display: none;
+    }
+
 }
