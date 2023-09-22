@@ -22,6 +22,17 @@ p {
     line-height: 2rem;
 }
 
+@media only screen and (max-width: 768px) {
+    h1 {
+        font-size: 4rem;
+    }
+
+    p {
+        line-height: 3rem;
+        font-size: 2rem;
+    }
+}
+
 a {
     color: rgb(33, 33, 33);
 }
@@ -84,4 +95,11 @@ a {
 .index p {
     line-height: 2.5rem;
     font-size: 1.25rem;
+}
+
+@media only screen and (max-width: 768px) {
+    .index p {
+        line-height: 4rem;
+        font-size: 2rem;
+    }
 }
