@@ -1,0 +1,68 @@
+<html>
+
+<head>
+    <title>Losing Thirty Before Thirty: A Challenge</title>
+    <link rel="stylesheet" href="paper.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link
+        href="https://fonts.googleapis.com/css2?family=IM+Fell+Great+Primer:ital@0;1&amp;family=Source+Serif+4:opsz,wght@8..60,300;8..60,400;8..60,500&amp;display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div id="editor">
+        <div class="header"></div>
+        <div class="meta">
+            <p id="date">September 24, 2023</p>
+        </div>
+        <div class="title editable" contenteditable="true">
+            <h1 data-ph="Title">Losing Thirty Before Thirty: A Challenge</h1>
+        </div>
+        <div class="content editable" contenteditable="true">
+            <p>Thirty. In thirty¹ weeks I'll be thirty years old and that is a big thing for me. Thirty is the age of my
+                father when I first asked him how old was he. If you're thirty, you're a grown up. Thirty is a final
+                goodbye to childhood. Thirty, is a milestone in life.</p>
+            <p>The first half of my twenties went like a roller coaster. Everything was so fast, emotional, and
+                spontaneous. In the second half, I tried to get my shit together. I understood that balance is the
+                ultimate comfort.</p>
+            <p>Arguably, I can say that I found some decent amount of balance, in most of the matters I had to deal
+                with. The perhaps only exception is: my weight.</p>
+            <p>I've been an obese since my teenage years and I've always felt like I could do much better in a leaner
+                and stronger body.</p>
+            <p>In these days where I'm moving to another stage in life, I want to leave this problem behind. Investing
+                in my mental abilities, studies and career turned out to be great but now, it's the time (if not too
+                late) to focus on my physical capabilities, well-being and health.</p>
+            <p>Although it sounds like I took an impulsive decision and set a childish goal about my weight, it's not
+                the case.</p>
+            <p>Four years ago, during 2019, I dedicated to lose 40 kgs of my body weight, mostly counting calories and
+                ended up losing 24 kgs (and gaining almost all of it within years).</p>
+            <p>I educated myself about fat metabolism, forming habits and behaviors and physical activity.</p>
+            <p>I've studied how people losing weight usually gains all of them in time and fall back to their earlier
+                life styles and diet.</p>
+            <p>Even though the picture is not much bright, I believe the best recipe for getting rid of the excess
+                weight and maintaining a healthy body weight lies in: gaining enough muscle to counter your natural
+                appetite, engineering your environment to make having a healthier lifestyle easier and setting goals
+                that you can follow until you die and become too old.</p>
+            <p>For the past two years, I've been trying make exercise a part of my life. I set up a a small home-gym
+                where I can exercise freely.</p>
+            <p>Last year, I taught myself how to run five kilometers² following a program called Couch to 5K.</p>
+            <p>For the the past six months I've been trying to make weightlifting 3 times per week a habit. A habit that
+                I could continue doing until I become too sick or too old.</p>
+            <p>For the past two months, I've been following a rule, almost religiously³: No food after 9pm. I can have
+                this&nbsp; rule in my entire life without much struggle.</p>
+            <p>I feel that now, it's the time. It's time where I am ready to fight obesity for good.&nbsp;</p>
+            <p>That's why I decided to: Lose 30 Before 30.</p>
+            <p>---</p>
+            <p>[1] Not exactly thirty, I don't want to expose my birthday online and I want to give myself some extra
+                time as a buffer.</p>
+            <p>[2] Running with 120 kilograms of body weight does not look like what Nike commercials show us. It's so
+                slow that 5K runs take an hour or more.</p>
+            <p>[3] Of course there were some times where I couldn't follow this rule and of course there will be.
+                Exceptions happen all the time. What's important is to make this a part of my identity.</p>
+        </div>
+    </div>
+</body>
+
+</html>
