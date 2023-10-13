@@ -19,19 +19,21 @@ const provider = new GoogleAuthProvider();
 const db = getFirestore(app);
 const postRef = doc(db, "posts", id);
 
-window.auth = auth
-
 const dom = {
     date: document.querySelector("#date"),
     title: document.querySelector("#title"),
-    content: document.querySelector("#content")
+    content: document.querySelector("#content"),
+    login: document.querySelector("#login")
 }
+
+dom.login.addEventListener("click", async () => {
+    await showSigninPopup()
+});
 
 onAuthStateChanged(auth, (user) => {
     if (user) {
+        dom.login.outerHTML = ""
         startPaper()
-    } else {
-        showSigninPopup()
     }
 });
 
