@@ -22,21 +22,6 @@ p {
     line-height: 2rem;
 }
 
-@media only screen and (max-width: 992px) {
-    h1 {
-        font-size: 4rem;
-    }
-
-    p {
-        line-height: 3rem;
-        font-size: 2rem;
-    }
-}
-
-a {
-    color: rgb(33, 33, 33);
-}
-
 [contenteditable] {
     outline: 0px solid transparent;
 }
@@ -52,70 +37,11 @@ a {
     text-justify: inter-word;
 }
 
-.meta>p {
+.meta > p {
     color: rgb(189, 189, 189);
 }
 
-[contentEditable=true] h1:empty:not(:focus)::before {
-    content: attr(data-ph);
+[contentEditable=true] h1:empty:not(:focus)::before{
+    content:attr(data-ph);
     color: rgb(189, 189, 189);
-}
-
-/* Index */
-
-.index {
-    width: 680px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 240px;
-    margin-bottom: 240px;
-}
-
-.index .title {
-    font-weight: 500;
-    width: 502px;
-    overflow: hidden;
-    float: left;
-    white-space: nowrap
-}
-
-.index .title::after {
-    font-weight: 300;
-    content: ' ...............................................................................';
-}
-
-.index .date {
-    float: right;
-}
-
-.index a {
-    text-decoration: none;
-}
-
-.index p {
-    line-height: 2.5rem;
-    font-size: 1.25rem;
-}
-
-@media only screen and (max-width: 992px) {
-    .index p {
-        line-height: 4rem;
-        font-size: 2rem;
-    }
-
-    .index .title::after {
-        font-weight: 300;
-    }
-
-    .index .title {
-        font-weight: 500;
-        width: stretch;
-        width: -webkit-fill-available;
-        width: -moz-available;
-    }
-
-    .index .date {
-        display: none;
-    }
-
 }
