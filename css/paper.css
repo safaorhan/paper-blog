@@ -50,6 +50,7 @@ a {
 .content {
     text-align: justify;
     text-justify: inter-word;
+    margin-bottom: 200px;
 }
 
 .meta>p {
@@ -117,5 +118,4 @@ a {
     .index .date {
         display: none;
     }
-
 }
