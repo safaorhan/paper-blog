@@ -1,5 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js";
-import { getFirestore, doc, setDoc, getDoc } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-firestore.js";
+import { getFirestore, doc, setDoc, getDoc, getDocs, collection, query, orderBy, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-firestore.js";
 import { getAuth, signInWithPopup, GoogleAuthProvider, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-auth.js";
 
 const id = new URLSearchParams(window.location.search).get("id") || navigateToWarningDoc();
@@ -84,5 +84,40 @@ async function savePost() {
         date: dom.date.innerHTML,
         title: dom.title.innerHTML,
         content: dom.content.innerHTML
+    }, { merge: true });
+}
+
+export async function getPublishedPosts() {
+    const postsRef = collection(db, "posts");
+    const q = query(postsRef, orderBy("publishedAt", "desc"));
+    const querySnapshots = await getDocs(q);
+
+    const posts = [];
+
+    querySnapshots.forEach((doc) => {
+        posts.push(doc.data())
     });
+
+    return posts;
+}
+
+export async function setPostPublished() {
+    const post = (await getDoc(postRef)).data()
+
+    const payload = {
+        titleStr: sanitizeTitle(post.title),
+        link: id,
+        updatedAt: serverTimestamp(),
+    }
+
+    if(!post.publishedAt) {
+        payload.publishedAt = serverTimestamp()
+    }
+
+    await setDoc(postRef, payload, { merge: true });
+}
+
+function sanitizeTitle(title) {
+    const titleDom = new DOMParser().parseFromString(title, "text/html");
+    return titleDom.querySelector("h1").innerHTML.replace("<br>", " ");
 }

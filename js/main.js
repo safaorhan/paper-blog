@@ -1,3 +1,6 @@
+import { formatDate } from "./utils/formatDate.js";
+import { publishPost } from "./publish.js";
+
 document.addEventListener("DOMContentLoaded", function (event) {
     showTodaysDate()
     
@@ -55,8 +58,13 @@ document.addEventListener("DOMContentLoaded", function (event) {
 });
 
 function showTodaysDate() {
-    const today = new Date()
-    const options = { year: 'numeric', month: 'long', day: 'numeric' };
-
-    document.querySelector("#date").innerHTML = today.toLocaleDateString('en-US', options)
+    const today = new Date();
+    document.querySelector("#date").innerHTML = formatDate(today);
 }
+
+document.addEventListener("keydown", async (event) => {
+    // Ctrl + Alt + D
+    if (event.keyCode == 68 && event.ctrlKey && event.altKey) {
+        await publishPost();
+    }
+});
