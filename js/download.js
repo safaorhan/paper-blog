@@ -10,8 +10,6 @@ function sanitizePostHtml(html) {
         element.outerHTML = ""
     });
 
-    html.querySelector("head > script").outerHTML = "";
-
     const titleText = html.querySelector(".title h1").innerHTML;
 
     html.querySelector("head > title").innerHTML = titleText.replace("<br>", " ") + " | Safa Orhan";
