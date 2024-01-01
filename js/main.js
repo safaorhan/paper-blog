@@ -1,9 +1,9 @@
 import { formatDate } from "./utils/formatDate.js";
-import { publishPost } from "./publish.js";
+import { handleKeyDown } from "./shortcutManager.js";
 
 document.addEventListener("DOMContentLoaded", function (event) {
     showTodaysDate()
-    
+
     document.querySelectorAll(".editable").forEach((element) => {
         element.setAttribute("contenteditable", true)
     })
@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
         if (event.isComposing || event.keyCode === 229) {
             return;
         }
-    
+
         // Enter || Down Arrow
         if ((event.keyCode === 13 || event.keyCode === 40) && !event.shiftKey) {
             content.focus()
@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
         if (event.isComposing || event.keyCode === 229) {
             return;
         }
-        
+
         // Up Arrow
         if (event.keyCode === 38) {
             const firstP = document.querySelector(".content > p:first-child")
@@ -63,8 +63,5 @@ function showTodaysDate() {
 }
 
 document.addEventListener("keydown", async (event) => {
-    // Ctrl + Alt + D
-    if (event.keyCode == 68 && event.ctrlKey && event.altKey) {
-        await publishPost();
-    }
+    await handleKeyDown(event);
 });
