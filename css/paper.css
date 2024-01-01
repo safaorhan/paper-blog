@@ -1,5 +1,10 @@
 body {
     background-color: rgb(252, 248, 245);
+    font-size: 1.25rem;
+    font-family: 'Source Serif 4', serif;
+    color: rgb(33, 33, 33);
+    font-weight: 300;
+    line-height: 2rem;
 }
 
 #editor {
@@ -9,6 +14,7 @@ body {
 
 h1 {
     font-size: 3rem;
+    line-height: 4rem;
     letter-spacing: -0.01em;
     font-family: 'IM Fell Great Primer', serif;
     color: rgb(33, 33, 33);
