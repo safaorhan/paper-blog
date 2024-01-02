@@ -37,6 +37,12 @@ p {
         line-height: 3rem;
         font-size: 2rem;
     }
+
+    body {
+        font-size: 2rem;
+        line-height: 3rem;
+    }
+
 }
 
 a {
